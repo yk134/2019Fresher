@@ -1,0 +1,416 @@
+(Que-1):  	
+	"Write a Python program to calculate the length of a string"
+
+Program:		
+	MyString="Hi, My name is Nikul vasar"
+	print("length of string is::",len(MyString))
+
+output:
+	length of string is::26
+	
+-----------------------------------------------------------------------------------------------------------
+(Que-2):
+	"Write a Python program to count the number of characters (character frequency) in a string.
+	 Sample String : google.com'
+	 Expected Result : {'o': 3, 'g': 2, '.': 1, 'e': 1, 'l': 1, 'm': 1, 'c': 1}"	
+
+Program:
+	MyString = "google.com"
+	Count_Freq={}
+	for i in MyString:
+		if i in Count_Freq:
+			Count_Freq[i] += 1
+		else:
+			Count_Freq[i] = 1
+	print ("charcter frequncy of MyStrinf:::----::: "+  str(Count_Freq))
+
+
+Output:
+	charcter frequncy of MyStrinf:::----::: {'c': 1, 'e': 1, 'o': 3, '.': 1, 'm': 1, 'g': 2, 'l': 1}
+-------------------------------------------------------------------------------------------------------------
+(Que-3)
+	"Write a Python program to get a single string from two given strings, separated by a space and swap the first two characters of each 		 string."
+
+	Sample String : 'abc', 'xyz'
+	Expected Result : 'xyc abz'
+
+Program:
+	str1="abc"
+	str2="xyz"
+
+	print("first string :::"+ str1)
+	print("Second String :::"+ str2)
+
+	New_str1=str1[2:]
+	#print(New_str1)
+
+	New_str11=str1[:2]
+	#print(New_str11)
+
+
+	New_str2=str2[:2]
+	#print(New_str2)
+
+	New_str22=str2[2:]
+	#print(New_str22)
+
+
+
+	print("Final string:::"+ " "+New_str2+New_str1+" "+New_str11+New_str22)
+
+	
+Output:
+	first string :::abc
+	Second String :::xyz
+	Final string::: xyc abz
+------------------------------------------------------------------------------------------------------------
+(Q-4)
+	"Write a Python function that takes a list of words and returns the length of the longest one."
+
+Program:
+	list=["nik","vasar nikul","Tech-Receptives","none"]
+	logest=0
+
+	for i in range(0,len(list)):
+		if len(str(logest)) < len(str(list[i])):
+			logest = list[i]
+		else:
+			logest[i]
+
+	print("Logest string is::",logest,"\nlength of Logest string is::",len(logest))
+
+output:
+	Logest string is:: Tech-Receptives 
+	length of Logest string is:: 15
+
+------------------------------------------------------------------------------------------------------------------
+(Q-5) Write a Python program to remove the nth index character from a nonempty string.
+	
+Program:
+	MyString="Google is Greate!"
+
+	a = int(input()) 
+	NewString= MyString.replace(MyString[a],'')
+	print(NewString)
+
+output:
+	input enter into runtime: 7
+	Google s Greate!  #i is remove at position no 7
+
+--------------------------------------------------------------------------------------------------------------------
+(Q-6) Write a Python program to change a given string to a new string where the first and last chars have been exchanged.
+
+Programe:
+	str1	= "eooglG"
+
+	print("given string :::" + str1)
+	string_1=(str1[-1:])
+	string_3=(str1[:-5])
+	string_2=(str1[1:5])
+	
+	print("New String :::"+string_1+string_2+string_3)
+
+
+Output:
+	given string :::eooglG
+	New String :::Google
+
+----------------------------------------------------------------------------------------------------------------------------
+(Q-7) Write a Python program to remove the characters which have odd index values of a given string.
+
+Programe:
+	def modify(str1):  
+		
+	  final=''
+	  for i in range(len(str1)):  
+	    if i % 2 == 0:  
+	      final = final + str1[i]  
+	  return final
+
+	str1=input("Enter string:")
+	print("Modified string is:"+modify(str1))
+
+Output:
+	Enter string:nikul
+	Modified string is:nkl
+
+----------------------------------------------------------------------------------------------------------------------
+(Q-8) Write a Python script that takes input from the user and displays that input back in upper and lower cases.
+
+Programe:
+	Name = input("Enter your Input : ")
+
+	print("Uper Case  ::"+Name.upper())
+	print("lower case ::"+Name.lower())
+
+Output:
+	Enter your Input : India        
+	Uper Case  ::INDIA
+	lower case ::india
+
+--------------------------------------------------------------------------------------------------------------------------
+(Q-9) Write a Python function to reverses a string if it's length is a multiple of 4.
+
+Progarme:
+	n=input("Enter string :")
+	MyStr=''
+	def rev_str(str1):
+	    if len(str1) % 4 == 0:
+	       return MyStr.join(reversed(str1))
+	    return str1
+
+print(rev_str(n))
+
+
+Output:
+	Enter string :DCBA
+	ABCD
+
+----------------------------------------------------------------------------------------------------------------------------
+(Q-10) Write a Python function to get a string made of 4 copies of the last two characters of a specified string (length must be at least 2).
+	Sample function and result :
+	insert_end('Python') -> onononon
+	insert_end('Exercises') -> eseseses
+Programe:
+	
+	def fun(str1):
+		return print((str1[-5:])*4)
+	
+	fun(str1="Python")
+	fun(str1="Exercises")
+
+Output:
+	onononon
+	eseseses
+
+
+-----------------------------------------------------------------------------------------------------------------------------
+(Q-11) Write a Python program to display formatted text (width=50) as output.
+
+Programe:
+	import textwrap
+	sample_text =input("Enter required string:")
+	print()
+	print(textwrap.fill(sample_text, width=50))
+	print()
+
+Output:
+	Enter required string: aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
+ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+eeeeeeeeeeeeefffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffgggggggggggggggggggggggggggg
+gggggggggggggggggggggggggggggggggggggggggggggghhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+hhhhhhhhhhhh
+
+	result:
+	 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+	aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+	aaaaaaaaaaaabbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+	bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbccccccccccccccccccc
+	cccccccccccccccccccccccccccccccccccccccccccccccccc
+	ccccdddddddddddddddddddddddddddddddddddddddddddddd
+	ddddddddddddddddddddeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+	eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+	eeeeeeeeefffffffffffffffffffffffffffffffffffffffff
+	ffffffffffffffffffffffffffffffffffffffffffffffffff
+	ffffffffffgggggggggggggggggggggggggggggggggggggggg
+	gggggggggggggggggggggggggggggggggghhhhhhhhhhhhhhhh
+	hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+	hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+(Q-12) Write a Python program to remove existing indentation from all of the lines in a given text.
+
+Programe:
+	import textwrap
+	sample_text =input("Enter required string:")
+
+	text_without_Indentation = textwrap.dedent(sample_text)
+	print()
+	print()
+	print(textwrap.fill(sample_text, width=50))
+	print()	
+
+Output:
+	Enter required string:This article will tell you more than you ever wanted to know about how to get through two miles of ice and bring 		back useful scientific information while doing it," said the editor who wrote most of this article on ice drilling. https://		e       n\.wikipedia.org/wiki/Ice_drilling …
+
+
+	This article will tell you more than you ever
+	wanted to know about how to get through two miles
+	of ice and bring back useful scientific
+	information while doing it," said the editor who
+	wrote most of this article on ice drilling.
+	https://en.wikipedia.org/wiki/Ice_drilling …
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+(Q-13) Write a Python program to add a prefix text to all of the lines in a string.
+
+
+Programe:
+	import textwrap
+	sample_text ='''
+  	  Python is a widely used high-level, general-purpose, interpreted,
+    	dynamic programming language. Its design philosophy emphasizes
+    	code readability, and its syntax allows programmers to express
+    	concepts in fewer lines of code than possible in languages such
+    	as C++ or Java.
+    	'''
+	text_without_Indentation = textwrap.dedent(sample_text)
+	wrapped = textwrap.fill(text_without_Indentation, width=50)
+	#wrapped += '\n\nSecond paragraph after a blank line.'
+	final_result = textwrap.indent(wrapped, '> ')
+	print()
+	print(final_result)
+	print()
+
+Output:
+	>  Python is a widely used high-level, general-
+	> purpose, interpreted, dynamic programming
+	> language. Its design philosophy emphasizes code
+	> readability, and its syntax allows programmers to
+	> express concepts in fewer lines of code than
+	> possible in languages such as C++ or Java.
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+(Q-14) Write a Python program to print the following floating numbers upto 2 decimal places.
+
+Proggrame:
+	var1=2.187888
+	var2=3.3233
+	var3=4.8898
+	var4=89.838
+
+	print ('%(kg).2f kg = %(lb).2f lb = %(gal).2f gal = %(l).2f l' % {
+	    'kg': var1,
+	    'lb': var2,
+	    'gal': var3,
+	    'l': var4,
+	})
+
+Output:
+	2.19 kg = 3.32 lb = 4.89 gal = 89.84 l
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+(Q-15) Write a Python program to print the following integers with zeros on the left of specified width.
+
+
+Programe:
+	x = 3
+	y = 123
+	print("Original Number: ", x)
+	print("Number(left padding, width 2): "+"{:0>2d}".format(x));
+	print("Original Number: ", y)
+	print("Number(left padding, width 6): "+"{:0>6d}".format(y));
+	print()
+
+Output:
+	Original Number:  3
+	Number(left padding, width 2): 03
+	Original Number:  123
+ 	Number(left padding, width 6): 000123
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+(Q-16) Write a Python program to display a number with a comma separator.
+
+
+Programe:
+	x = 1000
+	y = 1000000
+	print("Original Number: ", x)
+	print("Number with comma separator: {:,}".format(x));
+	print("Original Number: ", y)
+	print("Number with comma separator: {:,}".format(y));
+	print()
+
+Output:
+	Original Number:  1000
+	Number with comma separator: 1,000
+	Original Number:  1000000
+	Number with comma separator: 1,000,000
+
+--------------------------------------------------------------------------------------------------------------------------------------
+(Q-17) Write a Python program to format a number with a percentage.
+
+Programe:
+	x = 0.2578
+	y = 0.33333
+	print("Original Number: ", x)
+	print("Formatted Number with percentage: "+"{:.2%}".format(x));
+	print("Original Number: ", y)
+	print("Formatted Number with percentage: "+"{:.2%}".format(y));
+	print()	
+
+Output:
+	Original Number:  0.2578
+	Formatted Number with percentage: 25.78%
+	Original Number:  0.33333
+	Formatted Number with percentage: 33.33%
+	
+--------------------------------------------------------------------------------------------------------------------------------------
+(Q-18) Write a Python program to find smallest and largest word in a given string.
+
+Programe:
+	str1="Make in India"
+	max_str=max(str1.split(), key=len)
+	print("maximum string::",max_str)
+	
+	min_str=min(str1.split(), key=len)
+	print("smallest string::",min_str)	
+
+Output:
+	maximum string::India
+	smallest string::in
+
+--------------------------------------------------------------------------------------------------------------------------------------
+(Q-19) Write a Python program to count Uppercase, Lowercase, special character and numeric values in a given string.
+
+Programe:
+	def count(str):
+	     upper_ctr, lower_ctr, number_ctr, special_ctr = 0, 0, 0, 0
+	     for i in range(len(str)):
+	          if str[i] >= 'A' and str[i] <= 'Z': upper_ctr += 1
+	          elif str[i] >= 'a' and str[i] <= 'z': lower_ctr += 1
+	          elif str[i] >= '0' and str[i] <= '9': number_ctr += 1
+	          else: special_ctr += 1
+	     return upper_ctr, lower_ctr, number_ctr, special_ctr
+           
+	str = "Tech-@#Receptive'S"
+	print("Original Substrings:",str)
+	u, l, n, s = count(str)
+	print('\nUpper case characters: ',u)
+	print('Lower case characters: ',l)
+	print('Number case: ',n)
+	print('Special case characters: ',s)
+
+Output:
+	Original Substrings: Tech-@#Receptive'S
+
+	Upper case characters:  3
+	Lower case characters:  11
+	Number case:  0
+	Special case characters:  4
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+(Q-20) Write a Python program to move all spaces to the front of a given string in single traversal.
+
+Programe:
+	MyStr="My  Name    is    rahul"	
+	def SetSpace(MyStr):
+		No_space = [i for i in MyStr if i != ' ']
+		Space	 = 	len(MyStr) - len(No_space)
+		result = ' '*Space    
+		
+		return result + ''.join(No_space)
+
+	print("Origanal string:",MyStr)
+	print(SetSpace(MyStr))
+
+Output:
+	Origanal string: My  Name    is    rahul
+	"          MyNameisrahul" 	#space are counting before the string
+
+------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+	
