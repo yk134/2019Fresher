@@ -4,4 +4,10 @@ Amazon is the largest e-commerce marketplace and cloud computing platform in the
 
 Amazon is the largest Internet company by revenue in the world[12] and the second largest employer in the United States.[13] In 2015, Amazon surpassed Walmart as the most valuable retailer in the United States by market capitalization.[14] In 2017, Amazon acquired Whole Foods Market for $13.4 billion, which vastly increased Amazon's presence as a brick-and-mortar retailer.[15] The acquisition was interpreted by some[by whom?] as a direct attempt to challenge Walmart's traditional retail stores.[16]
 
+
 this is the new updated line in this file....
+
+Adding a remote To add a new remote, use the git remote add command on the terminal, in the directory your repository is stored at.The git remote add command takes two arguments: A remote name, for example, originA remote URL, for example, https://github.com/user/repo.git
+
+Amazon is the largest Internet company by revenue in the world[12] and the second largest employer in the United States.[13] In 2015, Amazon surpassed Walmart as the most valuable retailer in the United States by market capitalization.[14] In 2017, Amazon acquired Whole Foods Market for $13.4 billion, which vastly increased Amazon's presence as a brick-and-mortar retailer.[15] The acquisition was interpreted by some[by whom?] as a direct attempt to challenge Walmart's traditional retail stores.[16]
+
